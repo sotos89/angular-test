@@ -9,6 +9,7 @@ import { RelatedTopics } from '../models/relatedTopics';
   templateUrl: './females.component.html',
   styleUrls: ['./females.component.css']
 })
+
 export class FemalesComponent implements OnInit {
   females : Female[];
   relatedTopics : RelatedTopics[];
