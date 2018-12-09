@@ -3,16 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MalesComponent } from './males/males.component';
+import { FemalesComponent } from './females/females.component';
+import { NavComponent } from './nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TestService } from './test.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MalesComponent,
+    FemalesComponent,
+    NavComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,36 @@
+<div class="table-details display-width">
+  <div class="display-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Region</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let females of response">
+          <td><input type="checkbox" name={{females.name}} (click)="getName(females.name)" ng-model="item"/>&nbsp;</td>
+          <td>{{females.name}}</td>
+          <td>{{females.surname}}</td>
+          <td>{{females.region}}</td>
+          <td>{{females.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="displa-related"   *ngIf="relatedTopics">
+    <div class="relatedTopics" *ngIf="relatedTopics">
+      <div class="card" style="flex: 8">
+        <img src= "{{relatedTopics.Icon.URL}}" style="width:100%">
+      </div>
+      <div>
+        <p class="title"> </p>
+        <p>{{relatedTopics.Text}}</p>
+        <a href="" ng-click="">{{relatedTopics.FirstURL}}</a>
+      </div>
+    </div>
+  </div>
+</div>
