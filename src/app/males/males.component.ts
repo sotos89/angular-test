@@ -16,7 +16,7 @@ export class MalesComponent implements OnInit {
   males : Males[];
   relatedTopics : RelatedTopics[];
   user: any;  
-  name: any
+  name: any;
   response: any;
 
   getName(Males) {
